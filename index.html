@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>下載 Office Lens</title>
+    <script language="javascript" type="text/javascript">
+    function checkOS() {
+      var defaultUrl = 'https://www.microsoft.com/en-us/microsoft-365/blog/2015/04/02/office-lens-comes-to-iphone-and-android/';
+      var androidUrl = 'https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&hl=zh_TW';
+      var iphoneUrl = 'https://itunes.apple.com/tw/app/office-lens/id975925059?mt=8';
+      var url = '';
+      var ua = (navigator.userAgent || navigator.vendor || window.opera);
+      if (ua!=null) {
+        var uaName = ua.toLowerCase();
+        if (/android/i.test(uaName)){url = androidUrl;}
+        else if(/ip(hone|od)/i.test(uaName)) {url = iphoneUrl;}
+        else {url = defaultUrl;}
+        window.location.href = url;
+      }// if ua!=null
+    }//checkOS
+    </script>
+  </head>
+  <body onload='checkOS();'>
+  </body>
+</html>
